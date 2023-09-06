@@ -33,3 +33,15 @@ Read [Getting Started](https://www.wangchucheng.com/en/docs/hugo-eureka/getting-
 - and more...
 
 Are you using Hugo Eureka? [Add the `hugo-eureka` topic on your repo!](https://docs.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics) 🙌
+
+## Fork
+- Had to move the hugo-marble/noindex.html to partials
+- Had to change the theme in exampleSite/config/_default/config.yaml to point to the local version instead
+- Had to comment out the following two lines from the config in the example site:
+
+```yaml
+build:
+  useResourceCacheWhen: always
+```
+
+- Had to create an empty "stdin" file in the root of the directory

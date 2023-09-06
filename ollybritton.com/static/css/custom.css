@@ -1,0 +1,43 @@
+.wikilink {
+}
+
+.wikilink-blog {
+  color: #c44900 !important;
+}
+
+.wikilink-blog:visited {
+  color: #a33c00 !important;
+}
+
+.wikilink-notes {
+  color: #6f732f !important;
+}
+
+.wikilink-notes:visited {
+  color: #3c5233 !important;
+}
+
+.wikilink-uni {
+  color: #388ab2 !important;
+}
+
+.wikilink-uni:visited {
+  color: #2c6d8d !important;
+}
+
+.wikilink-misc {
+  color: #ef4390 !important;
+}
+
+.wikilink-misc:visited {
+  color: #dc136c !important;
+}
+
+.wikilink-unknown {
+  color: #999 !important;
+  cursor: help;
+}
+
+.wikilink-unknown:hover {
+  text-decoration: none !important;
+}

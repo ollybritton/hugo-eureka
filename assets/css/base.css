@@ -1,5 +1,5 @@
 :root {
-  @apply bg-primary-bg text-secondary-text font-eureka;
+  @apply bg-primary-bg text-secondary-text font-secondary;
   --color-eureka: {{ partial "utils/get-style-color" (dict "context" . "path" (slice "light" "theme")) }};
   --color-primary-bg: {{ partial "utils/get-style-color" (dict "context" . "path" (slice "light" "primaryBackground")) }};
   --color-secondary-bg: {{ partial "utils/get-style-color" (dict "context" . "path" (slice "light" "secondaryBackground")) }};
@@ -7,7 +7,8 @@
   --color-primary-text: {{ partial "utils/get-style-color" (dict "context" . "path" (slice "light" "primaryText")) }};
   --color-secondary-text: {{ partial "utils/get-style-color" (dict "context" . "path" (slice "light" "secondaryText")) }};
   --color-tertiary-text: {{ partial "utils/get-style-color" (dict "context" . "path" (slice "light" "tertiaryText")) }};
-  --fonts-eureka: {{ $fonts := partial "utils/get-style-fonts" (dict "context" . "param" "name") }}{{ range $index, $value := $fonts }}{{ if gt $index 0 }},{{ end }}{{ $value }}{{ else }}""{{ end }}
+  --fonts-secondary: {{ $fonts := partial "utils/get-style-fonts-secondary" (dict "context" . "param" "name") }}{{ range $index, $value := $fonts }}{{ if gt $index 0 }},{{ end }}{{ $value }}{{ else }}""{{ end }};
+  --fonts-primary: {{ $fonts := partial "utils/get-style-fonts-primary" (dict "context" . "param" "name") }}{{ range $index, $value := $fonts }}{{ if gt $index 0 }},{{ end }}{{ $value }}{{ else }}""{{ end }};
 }
 
 .dark {
@@ -23,7 +24,7 @@
 h1,
 h2,
 h3 {
-  @apply text-primary-text;
+  @apply text-primary-text font-primary;
 }
 
 a:hover,

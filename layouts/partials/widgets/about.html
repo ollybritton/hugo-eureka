@@ -1,3 +1,4 @@
+{{ if not .Params.disableAvatar }}
 <div class="mb-12 flex flex-col items-center justify-center md:flex-row">
   {{ $img := partial "utils/get-image" (dict "context" . "url" .Params.avatar "keyword" "*avatar*") }}
   {{ with $img }}
@@ -46,6 +47,7 @@
     {{ end }}
   </div>
 </div>
+{{ end }}
 <div class="prose">
   {{ .Content }}
 </div>

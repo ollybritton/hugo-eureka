@@ -167,7 +167,7 @@
 {{- end }}
 
 {{/*  Custom Head  */}}
-{{ partial "hugo-marble/utils/noindex" . }}
+{{ partial "utils/noindex" . }}
 {{ partial "custom-head" . }}
 
 {{- with .Site.Params.icon }}
@@ -185,4 +185,8 @@
 {{- partial "components/opengraph" . }}
 {{- range .AlternativeOutputFormats }}
 {{- printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{- end }}
+
+{{ range .Site.Params.customCSS -}}
+<link rel="stylesheet" href="{{ . | absURL }}">
 {{- end }}

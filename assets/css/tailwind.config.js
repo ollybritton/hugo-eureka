@@ -13,7 +13,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      eureka: ["var(--fonts-eureka)", ...defaultTheme.fontFamily.serif],
+      primary: ["var(--fonts-primary)", ...defaultTheme.fontFamily.serif],
+      secondary: ["var(--fonts-secondary)", ...defaultTheme.fontFamily.serif],
     },
     extend: {
       height: {

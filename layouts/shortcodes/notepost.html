@@ -1,0 +1,5 @@
+{{ $title := .Get "title" }}
+{{ $path := .Get "path" }}
+{{ $notfound := .Get "notfound" }}
+
+<a class="anchor-note-post" href="/posts/{{$path}}">[[<strong>{{$title}}</strong>]]<sup><strong>N</strong>{{if $notfound}}?{{end}}</sup></a>
